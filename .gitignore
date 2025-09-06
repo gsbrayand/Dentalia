@@ -1,0 +1,10 @@
+# Sistemas y editores
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Builds/temporales
+dist/
+node_modules/

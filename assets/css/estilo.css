@@ -1,0 +1,243 @@
+/* ===== Variables ===== */
+:root{
+  --c1:#1fb7b0;          /* turquesa Dentalia */
+  --c2:#3b5567;          /* gris azulado texto */
+  --c-bg:#ffffff;
+  --c-muted:#6c7a86;
+  --c-soft:#e9f7f6;
+  --shadow: 0 10px 25px rgba(0,0,0,.08);
+  --radius: 16px;
+}
+
+/* ===== Tipografía por TIPO ===== */
+html{scroll-behavior:smooth}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--c2); background: var(--c-bg);
+}
+h1,h2,h3{line-height:1.2;margin:0 0 .6rem}
+p{line-height:1.7;color:#2c3a44}
+a{color:var(--c1);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ===== Utilidades y layout (CLASES) ===== */
+.container{width:min(1100px, 92%); margin:0 auto}
+.grid-2{display:grid;gap:24px;grid-template-columns:repeat(2,1fr)}
+.grid-3{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
+.mt-40{margin-top:40px}
+.mt-header{margin-top:84px}
+.icon{width:48px;height:auto}
+.thumb{border-radius:var(--radius); width:100%; height:220px; object-fit:cover} /* ↑ más grande */
+.media img{border-radius:var(--radius); box-shadow: var(--shadow)}
+.checks{list-style: none; padding:0; margin:.5rem 0}
+.checks li{padding-left:28px; position:relative; margin:.4rem 0}
+.checks li::before{
+  content:"✓"; position:absolute; left:0; top:0; color:var(--c1); font-weight:700;
+}
+
+/* ===== Header y navegación ===== */
+.header{position:sticky; top:0; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,.06); z-index:50}
+.header__wrap{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+.nav__list{display:flex; gap:16px; align-items:center; margin:0; padding:0; list-style:none}
+.nav__link{padding:10px 14px; border-radius:10px; color:var(--c2)}
+.nav__link.active, .nav__link:hover{background:var(--c-soft)}
+.nav__toggle{display:none; width:40px; height:40px; border:0; background:transparent; cursor:pointer}
+.nav__toggle span{display:block; height:2px; background:var(--c2); margin:8px 0}
+
+/* ===== Botones (CLASE) ===== */
+.btn{display:inline-block; background:var(--c1); color:#fff; padding:12px 18px; border-radius:999px; box-shadow:var(--shadow)}
+.btn:hover{transform:translateY(-1px)}
+.btn--sec{background:var(--c2)}
+.btn--sm{padding:8px 12px; font-size:.9rem}
+
+/* ===== HERO (por ID) ===== */
+#hero{position:relative}
+.hero__media{height:68vh; min-height:420px; overflow:hidden}          /* ↑ más alto */
+.hero__img{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:left center;                                        /* ← muestra la frase de la imagen */
+  filter:saturate(.95)
+}
+.hero__content{
+  position:relative; margin-top:-120px; background:#fff;
+  border-radius:24px; padding:24px; box-shadow:var(--shadow)
+}
+.hero__content h1{font-size:clamp(1.6rem, 4vw, 2.4rem)}
+.accent{color:var(--c1)}
+.hero__cta{display:flex; gap:12px; margin-top:10px}
+
+/* ===== Cards y secciones ===== */
+.card{background:#fff; border-radius:var(--radius); padding:16px; box-shadow:var(--shadow)}
+.destacados .card .thumb{height:220px; object-fit:cover}              /* ↑ más grande */
+
+/* ===== Slider (centrado) ===== */
+.slider{
+  position:relative;
+  overflow:hidden;
+  margin:48px auto;
+  width:min(1100px, 92%);
+}
+
+.slider__track{
+  display:flex;
+  align-items:center;                 /* centra verticalmente el contenido */
+  transition:transform .6s ease;
+}
+
+.slide{
+  min-width:100%;
+  display:flex;                       /* centra horizontalmente la imagen dentro del slide */
+  justify-content:center;
+  align-items:center;
+}
+
+.slide img{
+  height:380px;                       /* alto fijo del carrusel */
+  width:auto;                         /* ancho automático para no “pegarse” a un lado */
+  max-width:100%;                     /* no excede el slide */
+  object-fit:contain;                 /* la imagen se ve completa */
+  object-position:center;
+  background:#fff;
+  border-radius:var(--radius);
+  padding:8px;
+}
+
+.slider__btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:#fff;
+  border:0;
+  width:38px; height:38px;
+  border-radius:999px;
+  box-shadow:var(--shadow);
+  cursor:pointer;
+}
+.slider__btn.prev{left:8px}
+.slider__btn.next{right:8px}
+
+/* ===== CTA sin imagen ===== */
+.ctas-simple{padding:8px 0 24px}
+.cta-links{display:flex; gap:12px; justify-content:center; margin-top:16px}
+.cta-links .btn{font-size:1.05rem; padding:14px 22px}
+
+/* ===== Patrón de fondo ===== */
+.patron{
+  background-image: url("../img/ui/fondo-patron-dental.png");
+  background-size: 420px;
+  padding: 48px 0;
+}
+/* Panel de contraste para legibilidad */
+.panel-contraste{
+  background: rgba(255,255,255,.92);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+/* ===== Acordeón ===== */
+#acordeon details{border:1px solid #e5eef0; border-radius:12px; padding:10px 14px; background:#fff; box-shadow:var(--shadow); margin:10px 0}
+#acordeon summary{cursor:pointer; font-weight:600}
+.ac-panel{padding-top:6px; color:var(--c-muted)}
+
+/* ===== Footer ===== */
+.footer{margin-top:48px; background:#f7fbfb; padding:28px 0}
+.footer__grid{display:grid; gap:16px; grid-template-columns:2fr 2fr 1fr}
+.footer a{color:var(--c2)}
+
+/* ===== Responsivo ===== */
+@media (max-width: 900px){
+  .grid-3{grid-template-columns:1fr 1fr}
+  .footer__grid{grid-template-columns:1fr}
+}
+@media (max-width: 720px){
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .hero__content{margin-top:-80px}
+  .nav__toggle{display:block}
+  .nav{position:absolute; right:0; top:64px; background:#fff; box-shadow:var(--shadow); border-radius:12px; padding:10px; display:none}
+  .nav.open{display:block}
+  .nav__list{flex-direction:column; align-items:flex-start}
+  .hero__img{object-position:center center} /* en móviles prioriza composición general */
+}
+
+/* ===== Collage centrado + CTA superpuesta ===== */
+.collage{
+  position: relative;
+  margin: 48px 0;
+  padding-bottom: 72px;              /* espacio para los botones superpuestos */
+}
+
+.collage__grid{
+  width: min(1100px, 92%);
+  margin: 0 auto;                    /* centrado real */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.collage__item{
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.collage__item img{
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;                 /* encuadre agradable */
+  object-position: center;
+}
+
+/* Botones centrados y superpuestos al borde inferior del collage */
+.collage__cta{
+  position: absolute;
+  left: 50%;
+  bottom: -10px;                     /* sobresale un poco hacia abajo */
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+/* Responsivo */
+@media (max-width: 900px){
+  .collage__grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px){
+  .collage__grid{ grid-template-columns: 1fr; }
+  .collage__item img{ height: 260px; }
+  .collage__cta{ bottom: -6px; }
+}
+
+/* ===== Tarjetas destacados: misma altura y formato ===== */
+.grid-3{ align-items: stretch; }
+
+.destacados .card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Marco de imagen unificado */
+.destacados .card .thumb{
+  width: 100%;
+  height: 220px;                 /* misma altura para las 3 */
+  display: block;
+  border-radius: var(--radius);
+  object-fit: cover;             /* fotos: llenan el marco */
+  box-sizing: border-box;        /* padding no aumenta la altura total */
+}
+
+/* Solo la de "Atención integral" (ícono) */
+.destacados .card .thumb.thumb--contain{
+  object-fit: contain !important;/* el ícono NO se recorta */
+  background: #fafafa;
+  padding: 16px;                 /* respiración sin crecer la tarjeta */
+}
+
+/* Títulos y párrafos uniformes */
+.destacados .card h3{ margin: 12px 0 6px; font-weight: 700; }
+.destacados .card p{ margin: 0 0 8px; color: #2c3a44; }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios | Dentalia</title>
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo/logo-dentalia.png" alt="Dentalia" height="40">
+      </a>
+      <button class="nav__toggle" id="btnMenu" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Inicio</a></li>
+          <li><a class="nav__link active" href="servicios.html">Servicios</a></li>
+          <li><a class="nav__link" href="nosotros.html">Nosotros</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mt-header">
+    <h1 id="servicios">Servicios</h1>
+
+    <section class="grid-3">
+      <article class="card">
+        <img src="assets/img/servicios/kit-dentalia.jpg" alt="Profilaxis y limpieza" class="thumb">
+        <h3>Profilaxis y limpieza</h3>
+        <p>Eliminación de placa y sarro, pulido y educación preventiva.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/servicios/ortodoncia-invisible.jpg" alt="Ortodoncia invisible" class="thumb">
+        <h3>Ortodoncia invisible</h3>
+        <p>Alineadores transparentes removibles para un tratamiento cómodo y estético.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/equipo/atencion-paciente.jpg" alt="Rehabilitación" class="thumb">
+        <h3>Rehabilitación</h3>
+        <p>Restauraciones, coronas y puentes con enfoque funcional y estético.</p>
+      </article>
+    </section>
+
+    <h2 class="mt-40">Ortodoncia: Proceso</h2>
+    <div class="infografia">
+      <img src="assets/img/ui/infografia-ortodoncia.png" alt="Infografía proceso de ortodoncia">
+    </div>
+
+    <!-- ACORDEÓN -->
+    <section id="acordeon" class="acordeon mt-40">
+      <h2>Preguntas frecuentes</h2>
+
+      <details class="ac-item" open>
+        <summary>¿Cada cuánto debo asistir a control?</summary>
+        <div class="ac-panel"><p>Generalmente cada 4 a 6 semanas, según el caso y el tipo de tratamiento.</p></div>
+      </details>
+
+      <details class="ac-item">
+        <summary>¿La ortodoncia invisible duele?</summary>
+        <div class="ac-panel"><p>Puede haber presión leve los primeros días de cada alineador. Es normal y transitoria.</p></div>
+      </details>
+
+      <details class="ac-item">
+        <summary>¿Manejan financiamiento?</summary>
+        <div class="ac-panel"><p>Sí. Ofrecemos planes flexibles y presupuestos por escrito antes de iniciar.</p></div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><img src="assets/img/logo/logo-dentalia-alt.png" alt="" height="36"></div>
+      <address>6a Avenida 0-00, Zona 1, Ciudad de Guatemala · <a href="tel:+50255555555">+502 5555 5555</a></address>
+      <nav><a href="aviso-privacidad.html">Aviso de privacidad</a></nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dentalia | Clínica Dental</title>
+  <meta name="description" content="Clínica Dentalia: prevención, ortodoncia, estética y atención integral.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/logo/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__wrap">
+      <a class="brand" href="index.html" aria-label="Inicio Dentalia">
+        <img src="assets/img/logo/logo-dentalia.png" alt="Dentalia" height="40">
+      </a>
+
+      <button class="nav__toggle" id="btnMenu" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Inicio</a></li>
+          <li><a class="nav__link" href="servicios.html">Servicios</a></li>
+          <li><a class="nav__link" href="nosotros.html">Nosotros</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+          <li><a class="btn btn--sm" href="aviso-privacidad.html">Aviso de privacidad</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero__media">
+        <img src="assets/img/banners/hero-sonrisa.jpg" alt="Sonrisa saludable" class="hero__img">
+      </div>
+      <div class="container hero__content">
+        <!-- Frase distinta a la de la imagen -->
+        <h1>Cuidamos tu sonrisa, <span class="accent">cuidamos de ti</span></h1>
+        <p>Citas puntuales, diagnósticos claros y tratamientos basados en evidencia.</p>
+        <div class="hero__cta">
+          <a class="btn" href="servicios.html">Ver servicios</a>
+          <a class="btn btn--sec" href="contacto.html">Agendar cita</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELLOS / DESTACADOS -->
+    <section class="container grid-3 destacados">
+      <article class="card">
+        <!-- Ícono ahora grande y consistente con el resto -->
+        <img src="assets/img/logo/icono-dental-cruz.png" alt="Atención integral" class="thumb thumb--contain">
+        <h3>Atención integral</h3>
+        <p>Prevención, estética, rehabilitación y ortodoncia en un solo lugar.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/equipo/sonrisa-mujer.jpg" alt="Resultados" class="thumb">
+        <h3>Resultados reales</h3>
+        <p>Casos documentados, antes y después, con seguimiento personalizado.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/equipo/atencion-paciente.jpg" alt="Tecnología y bioseguridad" class="thumb">
+        <h3>Tecnología y bioseguridad</h3>
+        <p>Protocolos estrictos y equipamiento de última generación.</p>
+      </article>
+    </section>
+
+    <!-- COLLAGE + CTA SUPERPUESTA -->
+<section class="collage" aria-label="Galería de tratamientos">
+  <div class="collage__grid">
+    <figure class="collage__item">
+      <img src="assets/img/servicios/kit-dentalia.jpg" alt="Cuidado dental diario, kit Dentalia">
+    </figure>
+    <figure class="collage__item">
+      <img src="assets/img/servicios/ortodoncia-invisible.jpg" alt="Ortodoncia invisible">
+    </figure>
+    <figure class="collage__item">
+      <img src="assets/img/equipo/equipo-dentalia.jpg" alt="Nuestro equipo">
+    </figure>
+  </div>
+
+  <!-- Botones superpuestos y centrados -->
+  <div class="collage__cta">
+    <a class="btn" href="servicios.html">Servicios</a>
+    <a class="btn btn--sec" href="contacto.html">Contacto</a>
+  </div>
+</section>
+
+    <!-- PATRÓN DE FONDO + INFO (con panel blanco para contraste) -->
+    <section class="patron">
+      <div class="container panel-contraste">
+        <h2 id="por-que-dentalia">¿Por qué Dentalia?</h2>
+        <ul class="checks">
+          <li>Explicamos cada procedimiento de forma clara.</li>
+          <li>Opciones de financiamiento y presupuestos honestos.</li>
+          <li>Seguimiento post-tratamiento y educación preventiva.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <img src="assets/img/logo/logo-dentalia-alt.png" alt="Dentalia" height="36">
+        <p>© <span id="year"></span> Dentalia. Todos los derechos reservados.</p>
+      </div>
+      <address>
+        <strong>Clínica Dentalia</strong><br>
+        6a Avenida 0-00, Zona 1, Ciudad de Guatemala<br>
+        Tel: <a href="tel:+50255555555">+502 5555 5555</a><br>
+        Correo: <a href="mailto:citas@dentalia.com">citas@dentalia.com</a>
+      </address>
+      <nav aria-label="Enlaces legales">
+        <a href="aviso-privacidad.html">Aviso de privacidad</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
